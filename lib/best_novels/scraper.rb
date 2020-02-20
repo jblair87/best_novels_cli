@@ -1,0 +1,2 @@
+class BestNovels::Scraper
+end
