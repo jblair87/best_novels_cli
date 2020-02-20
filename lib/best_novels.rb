@@ -1,5 +1,6 @@
 require_relative "./best_novels/version"
 require_relative "./best_novels/cli"
+require "pry"
 
 module BestNovels
   class Error < StandardError; end
