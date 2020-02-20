@@ -7,7 +7,7 @@ def call
 end
 
 def get_novels
-  @novels = ["book1","book2","book3"]
+  @novels = BestNovels::Novel.all
 end
 
 def list_novels
