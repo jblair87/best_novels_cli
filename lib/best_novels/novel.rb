@@ -8,6 +8,7 @@ def initialize(title)
 end
 
 def self.all
+  BestNovels::Scraper.scrape_novels if @@all.empty?
   @@all
 end
 

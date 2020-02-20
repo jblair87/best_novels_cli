@@ -4,6 +4,10 @@ require_relative "./best_novels/novel"
 require_relative "./best_novels/scraper"
 
 require "pry"
+require "nokogiri"
+require 'open-uri'
+
+
 
 module BestNovels
   class Error < StandardError; end
