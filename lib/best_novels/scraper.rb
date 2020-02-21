@@ -14,9 +14,8 @@ class BestNovels::Scraper
   def self.scrape_key_info(novel)
   url = "#{novel.url}"
   doc = Nokogiri::HTML(open(url))
-  ps = doc.css("div.content__article-body.from-content-api.js-article__body")
-  ps.each do |p|
-    info = p.css(p).text
+doc.css("div.content__article-body.from-content-api.js-article__body").each do  |p|
+    info = p.css("p").text.chomp
     novel.key_info << info
   end
 end

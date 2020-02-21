@@ -1,11 +1,11 @@
 class BestNovels::Novel
 @@all = []
-attr_accessor :title, :url, :details
+attr_accessor :title, :url, :key_info
 
 def initialize(title, url)
   @title = title
   @url = url
-  @details = []
+  @key_info = []
   save
 end
 

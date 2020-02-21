@@ -14,7 +14,6 @@ def get_novels
 end
 
 def list_novels
-  puts "Choose a novel to see summary."
   @novels.each.with_index(1) do |novel, index|
     puts "#{index}. #{novel.title}"
   end
@@ -27,19 +26,22 @@ def get_user_novel
 end
 
 def valid_input(input, data)
-  input.to_i <= data.length && input.to_i < 0
+  input.to_i <= data.length && input.to_i > 0
 end
 
 
 
 def show_details_for(chosen_novel)
-  puts novel.title
-  novel.key_info.each {|i| puts "- #{i}"}
+  novel = @novels[chosen_novel - 1]
+  novel.get_novel_details
+  puts " #{novel.title}"
+  puts "#{novel.key_info}"
 end
 
 def what_next
    puts "Are you done? Type 'exit' to exit or view an additional novel."
    @input = gets.strip
+
  end
 
  def goodbye
