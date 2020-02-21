@@ -5,7 +5,19 @@ class BestNovels::Scraper
     novels = doc.css("div.content__article-body.from-content-api.js-article__body p strong")
     novels.each do |n|
       title = n.css("a.u-underline").text.strip
-      BestNovels::Novel.new(title)
+      url = e.css("a").attr("href").value
+      BestNovels::Novel.new(title, url)
    end
   end
+
+
+  def self.scrape_key_info(novel)
+  url = "https://www.theguardian.com#{novel.url}"
+  doc = Nokogiri::HTML(open(url))
+  ps = doc.css("div.content__article-body.from-content-api.js-article__body p")
+  ps.each do |p|
+    info = p.text.strip
+    novel.details << info
+  end
+end
 end

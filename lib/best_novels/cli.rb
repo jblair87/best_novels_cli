@@ -13,7 +13,7 @@ end
 def list_novels
   puts "Choose a novel to see summary."
   @novels.each.with_index(1) do |novel, index|
-    puts "#{index}. #{novel}"
+    puts "#{index}. #{novel.title}"
   end
 end
 
