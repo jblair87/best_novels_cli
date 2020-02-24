@@ -12,11 +12,10 @@ class BestNovels::Scraper
 
 
   def self.scrape_key_info(novel)
-  url = "#{novel.url}"
-  doc = Nokogiri::HTML(open(url))
-doc.css("div.content__article-body.from-content-api.js-article__body").each do  |p|
-    info = p.css("p").text.chomp
-    novel.key_info << info
+    url = "#{novel.url}"
+    doc = Nokogiri::HTML(open(url))
+doc.css("div.content__article-body.from-content-api.js-article__body p:first-of-type").each do |paragraph|
+    novel.key_info << paragraph.text.strip
   end
 end
 end

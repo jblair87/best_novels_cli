@@ -1,6 +1,6 @@
 class BestNovels::Novel
+  attr_accessor :title, :url, :key_info
 @@all = []
-attr_accessor :title, :url, :key_info
 
 def initialize(title, url)
   @title = title
@@ -15,7 +15,7 @@ def self.all
 end
 
 def get_novel_details
-BestNovels::Scraper.scrape_key_info(self) if @key_info.empty?
+BestNovels::Scraper.scrape_key_info(self)
  end
 
 def save
