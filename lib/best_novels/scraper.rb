@@ -1,4 +1,5 @@
 class BestNovels::Scraper
+  #class method
   def self.scrape_novels
     site = "https://www.theguardian.com/books/2015/aug/17/the-100-best-novels-written-in-english-the-full-list"
     doc = Nokogiri::HTML(open(site))
@@ -10,7 +11,7 @@ class BestNovels::Scraper
    end
   end
 
-
+  #class method
   def self.scrape_review(novel)
     url = "#{novel.url}"
     doc = Nokogiri::HTML(open(url))

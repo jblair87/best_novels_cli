@@ -1,6 +1,6 @@
 class BestNovels::CLI
 def call
-  puts "Welcome to The Guardian's 100 Best Novels!"
+  puts "Welcome to The Guardian's List of 100 Best Novels!"
   @input = ""
   until @input == "exit"
   get_novels
@@ -17,6 +17,10 @@ def get_novels
 end
 
 def list_novels
+  puts ''
+  puts 'Choose a novel to read a review from The Guardian.'
+  puts ''
+
   @novels.each.with_index(1) do |novel, index|
     puts "#{index}. #{novel.title}"
   end
@@ -38,19 +42,19 @@ def show_details_for(chosen_novel)
   novel = @novels[chosen_novel - 1]
   novel.get_novel_details
   puts ""
-  puts "Robert McCrum's Review of: #{novel.title}"
+  puts "The Guardian's Review of: #{novel.title}"
   puts ""
   puts novel.review
   puts ""
-  puts "Read the full review at #{novel.url}"
+  puts "Read the full review:"
+  puts "#{novel.url}"
 end
 
 def what_next
   puts ""
   puts ""
-   puts "Are you done? Type 'exit' to exit or press any key to view the full list of novels."
-   @input = gets.strip
-
+  puts "Are you done? Type 'exit' to exit or press any key to view the full list of novels."
+  @input = gets.strip
  end
 
  def goodbye

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
 require_relative "../lib/best_novels"
-
+#Module::class method tiggers new instance of CLI class.instance method call
 BestNovels::CLI.new.call
