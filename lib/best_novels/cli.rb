@@ -40,7 +40,7 @@ def show_details_for(chosen_novel)
   puts ""
   puts "Robert McCrum's Review of: #{novel.title}"
   puts ""
-  puts novel.key_info
+  puts novel.review
   puts ""
   puts "Read the full review at #{novel.url}"
 end

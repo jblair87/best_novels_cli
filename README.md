@@ -1,6 +1,6 @@
 # BestNovels
 
-Find out about The Guardian's 100 Best Novels Ever Written!
+A CLI Application for the Guardian's 100 Best Novels Ever Written (in English)
 
 ## Installation
 
@@ -18,9 +18,6 @@ Or install it yourself as:
 
     $ gem install best_novels
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
@@ -30,7 +27,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/best_novels. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/<github username>/best_novels/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/jblair87/best_novels_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/jblair87/best_novels_cli/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -39,4 +36,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the BestNovels project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/best_novels/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the BestNovels project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/jblair87/best_novels_cli/blob/master/CODE_OF_CONDUCT.md).
