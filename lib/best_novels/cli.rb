@@ -21,7 +21,8 @@ def list_novels
   puts 'Choose a novel to read a review from The Guardian.'.colorize(:blue)
   puts ''
 
-  @novels.each.with_index(1) do |novel, index|
+sorted_novels = @novels.sort_by {|novel| novel.title}
+  sorted_novels.each.with_index(1) do |novel, index|
     puts "#{index}. #{novel.title}"
   end
 end
