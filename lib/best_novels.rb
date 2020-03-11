@@ -6,6 +6,8 @@ require_relative "./best_novels/scraper"
 require "pry"
 require "nokogiri"
 require 'open-uri'
+require 'colorize'
+
 
 
 
