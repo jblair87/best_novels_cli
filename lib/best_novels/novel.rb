@@ -10,6 +10,11 @@ def initialize(title, url)
   @url = url
   save
 end
+
+#def title
+  #@title
+#end
+
 #class method
 def self.all
   BestNovels::Scraper.scrape_novels if @@all.empty?
